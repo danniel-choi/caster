@@ -41,7 +41,7 @@ class App extends Component {
     })
     console.log(taskDisplay);
     return (
-      <div className="App">
+      <div className="container">
         <TaskAdd
           value={this.state.task}
           changeHandler={this.onChangeHandler}
