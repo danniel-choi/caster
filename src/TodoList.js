@@ -3,7 +3,8 @@ import TaskAdd from './TaskAdd';
 import TaskDisplay from './TaskDisplay';
 import firebase from "./config/firebase";
 import Login from './Login';
-class App extends Component {
+
+class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -17,7 +18,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
+  componentDidMount(){
     const tasks = [...this.state.tasks]
     const firestore = firebase.firestore;
     firestore.collection('tasks').get()
@@ -29,7 +30,6 @@ class App extends Component {
       })
       .catch(e=>console.log(e));
   }
-
   onClickHandler = (e) => {
     e.preventDefault();
     const firestore = firebase.firestore;
@@ -95,4 +95,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default TodoList;

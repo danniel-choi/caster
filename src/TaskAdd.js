@@ -10,7 +10,6 @@ const TaskAdd = ({value,changeHandler,clickHandler}) => {
           <button class="button is-primary" onClick={clickHandler}>저장</button>
         </div>
       </form>
-     
     )
  }
 
